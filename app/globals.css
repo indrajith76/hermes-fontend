@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.background {
+    background: linear-gradient(128.62deg, #0A0B10 23.82%, #121009 54.72%, #0B0D13 82.65%);
+}
+
+.text-golden {
+    color: #D0C06C;
+}
