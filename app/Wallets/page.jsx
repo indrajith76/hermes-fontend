@@ -1,10 +1,10 @@
 export default function Wallets() {
   return (
     <div>
-      <div className="p-9">
+      <div className="p-5 md:p-9">
         <p className="text-golden text-[11px]">Wallets</p>
         <p className="text-4xl mb-5">Active Wallets</p>
-        <div className="w-[520px] lg:w-auto overflow-auto">
+        <div className="w-[320px] md:w-[520px] lg:w-auto overflow-auto">
 
         <table className="w-[1017px] border-separate border-spacing-y-2">
           <thead>
@@ -49,8 +49,8 @@ export default function Wallets() {
         </div>
       </div>
 
-      <div className="border-t p-9 pt-6">
-        <div className="flex justify-between items-end">
+      <div className="border-t p-5 md:p-9 pt-6">
+        <div className=" md:flex justify-between items-end">
           <p className="text-golden text-[10px]">
             Last Updated - 10 seconds ago...
           </p>
@@ -61,7 +61,7 @@ export default function Wallets() {
               alt=""
             />
             <input
-              className="w-[177px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2 pl-8"
+              className="w-full mt-2 md:mt-0 md:w-[177px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2 pl-8"
               type="text"
               name=""
               id=""
@@ -74,7 +74,7 @@ export default function Wallets() {
         <div className="flex flex-col gap-5 py-5 w-full lg:w-[935px] border-t border-[#26272E] mt-8">
           {[1, 2, 3, 4].map((item, idx) => (
             <div key={idx} className="flex items-center justify-between">
-              <p className="text-[13px]">
+              <p className="text-[10px] md:text-[13px]">
                 0x73ff03f25cf2e0d7a1c4bc2ce21eeb22dbbd4c68
               </p>
               <button className="text-[#D0C06C] text-[10px]">

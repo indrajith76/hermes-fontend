@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
+import { BsList } from "react-icons/bs";
 
-const Navbar = () => {
+const Navbar = ({ sidebar, setSidebar }) => {
   return (
     <div className="border-b flex flex-col lg:flex-row lg:items-center">
       <div className="hidden lg:block w-[192px] lg:border-r pl-2 py-5">
@@ -13,14 +14,22 @@ const Navbar = () => {
           </div>
         </Link>
       </div>
-      <div className="flex lg:hidden justify-between px-5 pt-5">
-        <Link className="flex items-center" href="/">
-          <img src="/images/logo.png" alt="" />
-          <div>
-            <p className="text-lg m-0 leading-5">Hermes</p>
-            <p className="text-[11px] text-[#D0C06C]">Automated Trading</p>
-          </div>
-        </Link>
+      <div className="flex lg:hidden justify-between px-5 pt-5 mb-5 md:mb-0">
+        <div className="flex items-center">
+          <button
+            onClick={() => setSidebar(!sidebar)}
+            className="border rounded p-1 block md:hidden"
+          >
+            <BsList />
+          </button>
+          <Link className="flex items-center" href="/">
+            <img src="/images/logo.png" alt="" />
+            <div>
+              <p className="text-lg m-0 leading-5">Hermes</p>
+              <p className="text-[11px] text-[#D0C06C]">Automated Trading</p>
+            </div>
+          </Link>
+        </div>
         <div className="flex items-center gap-[5px]">
           <img src="/images/Ellipse1.png" alt="" />
           <div>
@@ -29,7 +38,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-0 w-full px-10 mb-5 lg:mb-0">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-0 w-full px-5 md:px-10 mb-5 lg:mb-0">
         <div className="hidden lg:flex items-center gap-[5px]">
           <img src="/images/Ellipse1.png" alt="" />
           <div>
@@ -53,7 +62,7 @@ const Navbar = () => {
           />
         </div>
 
-        <ul className="flex items-center gap-8">
+        <ul className="flex items-center gap-4 md:gap-8">
           <li>
             <a href="#">
               <img src="/images/discord.png" alt="" />

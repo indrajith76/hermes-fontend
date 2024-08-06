@@ -1,9 +1,20 @@
 import Link from "next/link";
 import React from "react";
+import { AiOutlineClose } from "react-icons/ai";
 
-const Sidebar = () => {
+const Sidebar = ({ sidebar, setSidebar }) => {
   return (
-    <div className="flex flex-col justify-between border-r border-white text-white">
+    <div
+      className={`z-10 duration-500 absolute top-0 ${
+        sidebar ? "-left-[170px]" : "left-0"
+      } bg-[#0a0b10] md:relative flex flex-col justify-between border-r border-white text-white`}
+    >
+      <button
+        onClick={() => setSidebar(!sidebar)}
+        className="absolute block md:hidden top-2 right-2 p-1 text-gray-500 border border-gray-500 rounded"
+      >
+        <AiOutlineClose />
+      </button>
       <div className="w-[167px] h-screen px-2 pt-6">
         <ul className="flex flex-col gap-2">
           <li>
@@ -34,10 +45,8 @@ const Sidebar = () => {
         <ul className="flex flex-col gap-8">
           <li className="text-[15px] ">Dashboard</li>
           <li className="text-[15px] ">
-            <Link href="/Wallets">
-            Wallets
-            </Link>
-            </li>
+            <Link href="/Wallets">Wallets</Link>
+          </li>
           <li className="text-[15px] ">Trades</li>
           <li className="text-[15px] ">Volume</li>
         </ul>

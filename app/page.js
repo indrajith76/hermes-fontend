@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="p-9">
+      <div className="p-5 md:p-9">
         <p className="text-golden text-[11px]">Dashboard</p>
         <p className="text-4xl mb-5">Open Positions</p>
 
@@ -146,38 +146,38 @@ export default function Home() {
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         {nextProcess ? (
-          <div className="bg-[#13141B] px-[27px] py-5 rounded-xl border border-gray-600 w-[700px]">
+          <div className="bg-[#13141B] px-[27px] py-5 rounded-xl border border-gray-600 w-full md:w-[700px]">
             <img src="/images/logo.png" alt="" />
-            <p className="text-3xl leading-10">New Position</p>
+            <p className="text-xl md:text-3xl leading-10">New Position</p>
             <p className="text-[10px]">
               Create a new position and trade on Hermes.
             </p>
-            <div className="flex gap-5 mt-6">
-              <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
+            <div className="flex gap-1 md:gap-5 mt-1 md:mt-6">
+              <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-2 md:px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
                 <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
                 <span className="text-xs">SCALE IN</span>
               </button>
-              <button class="bg-neutral-950 text-[#D0C06C] border border-[#D0C06C] border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
+              <button class="bg-neutral-950 text-[#D0C06C] border border-[#D0C06C] border-b-4 font-medium overflow-hidden relative px-2 md:px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
                 <span class="bg-[#D0C06C] shadow-[#D0C06C] absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
                 <span className="text-xs">SCALE OUT</span>
               </button>
-              <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
+              <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-2 md:px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
                 <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
                 <span className="text-xs">VOLUME BOTS</span>
               </button>
             </div>
 
-            <div className="flex flex-col gap-2 mt-7">
-              <p className="text-2xl">Time Intervals (minutes)</p>
+            <div className="flex flex-col gap-2 mt-2 md:mt-7">
+              <p className="text-lg md:text-2xl">Time Intervals (minutes)</p>
               <input
-                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                className=" md:w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
                 type="text"
                 name=""
                 id=""
                 placeholder="Buy Interval"
               />
               <input
-                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                className=" md:w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
                 type="text"
                 name=""
                 id=""
@@ -185,17 +185,17 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex flex-col gap-2 mt-7">
-              <p className="text-2xl">Trade Sizes (ranges)</p>
+            <div className="flex flex-col gap-2 mt-2 md:mt-7">
+              <p className="text-lg md:text-2xl">Trade Sizes (ranges)</p>
               <input
-                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                className=" md:w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
                 type="text"
                 name=""
                 id=""
                 placeholder="Buy Size"
               />
               <input
-                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                className=" md:w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
                 type="text"
                 name=""
                 id=""
@@ -203,17 +203,17 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex flex-col gap-2 mt-7">
-              <p className="text-2xl">How many wallets should you use?</p>
+            <div className="flex flex-col gap-2 mt-2 md:mt-7">
+              <p className="text-lg md:text-2xl">How many wallets should you use?</p>
               <input
-                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                className=" md:w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
                 type="text"
                 name=""
                 id=""
                 placeholder="# of connected wallets to sell on"
               />
             </div>
-            <div className="flex items-center gap-3 mt-5">
+            <div className="flex items-center gap-3 mt-2 md:mt-5">
               <p>SHADOW TRADING:</p>
               <input
                 className={`switch ${switchStatus ? "switchOn" : "switchOff"}`}
@@ -233,24 +233,24 @@ export default function Home() {
             </div>
           </div>
         ) : (
-          <div className="bg-[#13141B] px-[27px] py-5 rounded-xl border border-gray-600 w-[700px]">
+          <div className="bg-[#13141B] px-[27px] py-5 rounded-xl border border-gray-600 w-full md:w-[700px]">
             <img src="/images/logo.png" alt="" />
-            <p className="text-3xl leading-10">Choose Wallets</p>
+            <p className="text-xl md:text-3xl leading-10">Choose Wallets</p>
             <p className="text-[10px]">
               Choose or generate the wallets you wish to use to execute.
             </p>
 
-            <div className="flex flex-col gap-2 mt-7">
-              <p className="text-2xl">Make new wallets</p>
+            <div className="flex flex-col gap-2 md:mt-7">
+              <p className="text-lg md:text-2xl">Make new wallets</p>
               <input
-                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                className=" md:w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
                 type="text"
                 name=""
                 id=""
                 placeholder="How many wallets?"
               />
               <input
-                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                className=" md:w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
                 type="text"
                 name=""
                 id=""
@@ -262,14 +262,14 @@ export default function Home() {
               </button>
             </div>
 
-            <p className="text-2xl mt-12">
+            <p className="text-lg md:text-2xl mt-12">
               <em>OR...</em>
             </p> 
 
-            <div className="flex flex-col gap-2 mt-7">
-              <p className="text-2xl">How many wallets should you use?</p>
+            <div className="flex flex-col gap-2 md:mt-7">
+              <p className="text-lg md:text-2xl">How many wallets should you use?</p>
               <input
-                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                className=" md:w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
                 type="text"
                 name=""
                 id=""
@@ -287,8 +287,8 @@ export default function Home() {
         )}
       </Modal>
 
-      <div className="border-t p-9 pt-6">
-        <div className="flex justify-between items-end">
+      <div className="border-t p-5 md:p-9 pt-6">
+        <div className="md:flex justify-between items-end">
           <p className="text-golden text-[10px]">
             Last Updated - 10 seconds ago...
           </p>
@@ -299,7 +299,7 @@ export default function Home() {
               alt=""
             />
             <input
-              className="w-[177px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2 pl-8"
+              className="mt-2 md:mt-0 w-full md:w-[177px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2 pl-8"
               type="text"
               name=""
               id=""
@@ -307,11 +307,11 @@ export default function Home() {
             />
           </div>
         </div>
-        <h2 className="text-4xl leading-10 mt-2">
+        <h2 className="text-xl md:text-4xl leading-10 mt-2">
           Buy Hermes Protocol (HERMES)
         </h2>
         <div className="flex items-center gap-7 mt-2 mb-[45px]">
-          <p className="text-5xl leading-[62px]">$62.254</p>
+          <p className="text-2xl md:text-5xl leading-[62px]">$62.254</p>
           <button class="bg-neutral-950 text-[#D0C06C] border border-[#D0C06C] border-b-4 font-medium overflow-hidden relative px-4 py-[4px] rounded-md active:opacity-75 outline-none duration-300 group">
             <span class="bg-[#D0C06C] shadow-[#D0C06C] absolute -top-[150%] left-0 inline-flex w-80 text-[15px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
             Open Position
@@ -346,25 +346,25 @@ export default function Home() {
               <p className="text-[10px] leading-3 text-[#D0C06C]">
                 Capital Inflows
               </p>
-              <p className="text-2xl leading-8 mt-[6px]">+$874k</p>
+              <p className="text-base md:text-2xl leading-8 mt-[6px]">+$874k</p>
             </div>
             <div className="lg:w-[168px] h-[81px] bg-[#13141B] border border-[#424550] rounded-lg p-[10px]">
               <p className="text-[10px] leading-3 text-[#D0C06C]">
                 Capital Inflows
               </p>
-              <p className="text-2xl leading-8 mt-[6px]">+$874k</p>
+              <p className="text-base md:text-2xl leading-8 mt-[6px]">+$874k</p>
             </div>
             <div className="lg:w-[168px] h-[81px] bg-[#13141B] border border-[#424550] rounded-lg p-[10px]">
               <p className="text-[10px] leading-3 text-[#D0C06C]">
                 Capital Inflows
               </p>
-              <p className="text-2xl leading-8 mt-[6px]">+$874k</p>
+              <p className="text-base md:text-2xl leading-8 mt-[6px]">+$874k</p>
             </div>
             <div className="lg:w-[168px] h-[81px] bg-[#13141B] border border-[#424550] rounded-lg p-[10px]">
               <p className="text-[10px] leading-3 text-[#D0C06C]">
                 Capital Inflows
               </p>
-              <p className="text-2xl leading-8 mt-[6px]">+$874k</p>
+              <p className="text-base md:text-2xl leading-8 mt-[6px]">+$874k</p>
             </div>
           </div>
         </div>
