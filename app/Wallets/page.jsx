@@ -4,6 +4,8 @@ export default function Wallets() {
       <div className="p-9">
         <p className="text-golden text-[11px]">Wallets</p>
         <p className="text-4xl mb-5">Active Wallets</p>
+        <div className="w-[520px] lg:w-auto overflow-auto">
+
         <table className="w-[1017px] border-separate border-spacing-y-2">
           <thead>
             <tr>
@@ -44,6 +46,7 @@ export default function Wallets() {
             </tr>
           </tbody>
         </table>
+        </div>
       </div>
 
       <div className="border-t p-9 pt-6">
@@ -68,7 +71,7 @@ export default function Wallets() {
         </div>
         <h2 className="text-4xl leading-10 mt-2">All Wallets</h2>
 
-        <div className="flex flex-col gap-5 py-5 w-[935px] border-t border-[#26272E] mt-8">
+        <div className="flex flex-col gap-5 py-5 w-full lg:w-[935px] border-t border-[#26272E] mt-8">
           {[1, 2, 3, 4].map((item, idx) => (
             <div key={idx} className="flex items-center justify-between">
               <p className="text-[13px]">

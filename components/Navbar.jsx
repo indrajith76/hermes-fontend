@@ -3,8 +3,8 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="border-b flex items-center">
-      <div className=" w-[192px] border-r pl-2 py-5">
+    <div className="border-b flex flex-col lg:flex-row lg:items-center">
+      <div className="hidden lg:block w-[192px] lg:border-r pl-2 py-5">
         <Link className="flex items-center" href="/">
           <img src="/images/logo.png" alt="" />
           <div>
@@ -13,8 +13,24 @@ const Navbar = () => {
           </div>
         </Link>
       </div>
-      <div className=" flex items-center justify-between w-full px-10">
+      <div className="flex lg:hidden justify-between px-5 pt-5">
+        <Link className="flex items-center" href="/">
+          <img src="/images/logo.png" alt="" />
+          <div>
+            <p className="text-lg m-0 leading-5">Hermes</p>
+            <p className="text-[11px] text-[#D0C06C]">Automated Trading</p>
+          </div>
+        </Link>
         <div className="flex items-center gap-[5px]">
+          <img src="/images/Ellipse1.png" alt="" />
+          <div>
+            <p className="text-[11px] leading-3">@treasure11</p>
+            <p className="text-[11px] text-[#D0C06C]">treasure.eth</p>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-0 w-full px-10 mb-5 lg:mb-0">
+        <div className="hidden lg:flex items-center gap-[5px]">
           <img src="/images/Ellipse1.png" alt="" />
           <div>
             <p className="text-[11px] leading-3">@treasure11</p>

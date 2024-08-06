@@ -16,8 +16,8 @@ export default function Home() {
         <p className="text-golden text-[11px]">Dashboard</p>
         <p className="text-4xl mb-5">Open Positions</p>
 
-        <div className=" flex gap-[63px]">
-          <div className="w-full grid grid-cols-3 gap-[30px]">
+        <div className=" flex flex-col lg:flex-row gap-[63px]">
+          <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
             <div className="bg-[#13141B] p-4 h-[190px] rounded-[10px]">
               <div className="flex justify-between items-center">
                 <p className="flex items-center gap-1 text-[11px] bg-[#424550] px-[6px] rounded">
@@ -322,45 +322,45 @@ export default function Home() {
           </button>
         </div>
 
-        <div className=" w-[915px] ">
-          <div className="border-b border-[#424550] mb-5 pb-2 grid grid-cols-4">
-            <div className="w-[168px]">
+        <div className=" lg:w-[915px] ">
+          <div className="border-b border-[#424550] mb-5 pb-2 grid grid-cols-4 gap-2">
+            <div className="lg:w-[168px]">
               <p className="text-[13px] leading-4">Momentum</p>
               <p className="text-[10px] text-[#D0C06C] leading-3">Money Flow</p>
             </div>
-            <div className="w-[168px]">
+            <div className="lg:w-[168px]">
               <p className="text-[13px] leading-4">Momentum</p>
               <p className="text-[10px] text-[#D0C06C] leading-3">Money Flow</p>
             </div>
-            <div className="w-[168px]">
+            <div className="lg:w-[168px]">
               <p className="text-[13px] leading-4">Momentum</p>
               <p className="text-[10px] text-[#D0C06C] leading-3">Money Flow</p>
             </div>
-            <div className="w-[168px]">
+            <div className="lg:w-[168px]">
               <p className="text-[13px] leading-4">Momentum</p>
               <p className="text-[10px] text-[#D0C06C] leading-3">Money Flow</p>
             </div>
           </div>
-          <div className="grid grid-cols-4">
-            <div className="w-[168px] h-[81px] bg-[#13141B] border border-[#424550] rounded-lg p-[10px]">
+          <div className="grid grid-cols-4 gap-2">
+            <div className="lg:w-[168px] h-[81px] bg-[#13141B] border border-[#424550] rounded-lg p-[10px]">
               <p className="text-[10px] leading-3 text-[#D0C06C]">
                 Capital Inflows
               </p>
               <p className="text-2xl leading-8 mt-[6px]">+$874k</p>
             </div>
-            <div className="w-[168px] h-[81px] bg-[#13141B] border border-[#424550] rounded-lg p-[10px]">
+            <div className="lg:w-[168px] h-[81px] bg-[#13141B] border border-[#424550] rounded-lg p-[10px]">
               <p className="text-[10px] leading-3 text-[#D0C06C]">
                 Capital Inflows
               </p>
               <p className="text-2xl leading-8 mt-[6px]">+$874k</p>
             </div>
-            <div className="w-[168px] h-[81px] bg-[#13141B] border border-[#424550] rounded-lg p-[10px]">
+            <div className="lg:w-[168px] h-[81px] bg-[#13141B] border border-[#424550] rounded-lg p-[10px]">
               <p className="text-[10px] leading-3 text-[#D0C06C]">
                 Capital Inflows
               </p>
               <p className="text-2xl leading-8 mt-[6px]">+$874k</p>
             </div>
-            <div className="w-[168px] h-[81px] bg-[#13141B] border border-[#424550] rounded-lg p-[10px]">
+            <div className="lg:w-[168px] h-[81px] bg-[#13141B] border border-[#424550] rounded-lg p-[10px]">
               <p className="text-[10px] leading-3 text-[#D0C06C]">
                 Capital Inflows
               </p>

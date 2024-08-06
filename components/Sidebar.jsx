@@ -4,7 +4,7 @@ import React from "react";
 const Sidebar = () => {
   return (
     <div className="flex flex-col justify-between border-r border-white text-white">
-      <div className="w-[167px] h-full px-2 pt-6">
+      <div className="w-[167px] h-screen px-2 pt-6">
         <ul className="flex flex-col gap-2">
           <li>
             <Link href="#" className="flex items-center gap-1">
