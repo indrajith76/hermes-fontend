@@ -20,3 +20,45 @@ body {
     background: linear-gradient(186.21deg, #11100A 35.06%, #222017 48.08%, #2F2C1D 61.1%, #48442D 79.54%, #786F43 93.29%, #AFA25D 107.39%);
 
 }
+
+/* switch */ 
+.switch {
+    position: relative;
+    height: 1rem;
+    width: 2rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 9999px;
+    background-color: rgba(100, 116, 139, 0.377);
+    transition: all .3s ease;
+    border: 1px solid #D0C06C;
+  }
+  
+  .switch:checked {
+    background-color: #13141B;
+  }
+  
+  .switch::before {
+    position: absolute;
+    content: "";
+    left: calc(1rem - 1.2rem);
+    top: calc(1rem - 1.2rem);
+    display: block;
+    height: 1.2rem;
+    width: 1.2rem;
+    cursor: pointer;
+    border: 1px solid rgba(100, 116, 139, 0.527);
+    border-radius: 9999px;
+    background-color: #D0C06C;
+    box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+    transition: all .3s ease;
+  }
+  
+  .switchOn:checked:before {
+    transform: translateX(100%); 
+  }
+
+  .switchOff:checked:before {
+    transform: translateX(0%); 
+  }
