@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = DM_Sans({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Hermes",
@@ -14,11 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className + " background"}>
-        <div className="flex ">
-          <Sidebar />
-          <div>
-            <Navbar />
-            {children}
+        <div>
+          <Navbar />
+          <div className="flex">
+            <Sidebar />
+            <div className="w-full">{children}</div>
           </div>
         </div>
       </body>

@@ -3,10 +3,20 @@
 @tailwind utilities;
 
 
+body {
+    color: #fff;
+}
+
 .background {
     background: linear-gradient(128.62deg, #0A0B10 23.82%, #121009 54.72%, #0B0D13 82.65%);
+    background-repeat: no-repeat;
 }
 
 .text-golden {
     color: #D0C06C;
+}
+
+.card-bg{
+    background: linear-gradient(186.21deg, #11100A 35.06%, #222017 48.08%, #2F2C1D 61.1%, #48442D 79.54%, #786F43 93.29%, #AFA25D 107.39%);
+
 }
