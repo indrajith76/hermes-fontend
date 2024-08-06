@@ -33,7 +33,11 @@ const Sidebar = () => {
 
         <ul className="flex flex-col gap-8">
           <li className="text-[15px] ">Dashboard</li>
-          <li className="text-[15px] ">Wallets</li>
+          <li className="text-[15px] ">
+            <Link href="/Wallets">
+            Wallets
+            </Link>
+            </li>
           <li className="text-[15px] ">Trades</li>
           <li className="text-[15px] ">Volume</li>
         </ul>

@@ -1,14 +1,17 @@
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
   return (
     <div className="border-b flex items-center">
-      <div className="flex items-center w-[192px] border-r pl-2 py-5">
-        <img src="/images/logo.png" alt="" />
-        <div>
-          <p className="text-lg m-0 leading-5">Hermes</p>
-          <p className="text-[11px] text-[#D0C06C]">Automated Trading</p>
-        </div>
+      <div className=" w-[192px] border-r pl-2 py-5">
+        <Link className="flex items-center" href="/">
+          <img src="/images/logo.png" alt="" />
+          <div>
+            <p className="text-lg m-0 leading-5">Hermes</p>
+            <p className="text-[11px] text-[#D0C06C]">Automated Trading</p>
+          </div>
+        </Link>
       </div>
       <div className=" flex items-center justify-between w-full px-10">
         <div className="flex items-center gap-[5px]">
@@ -46,16 +49,24 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="text-[13px]" href="#">Notifications</a>
+            <a className="text-[13px]" href="#">
+              Notifications
+            </a>
           </li>
           <li>
-            <a className="text-[13px]" href="#">$HERMES</a>
+            <a className="text-[13px]" href="#">
+              $HERMES
+            </a>
           </li>
           <li>
-            <a className="text-[13px]" href="#">Settings</a>
+            <a className="text-[13px]" href="#">
+              Settings
+            </a>
           </li>
           <li>
-            <a className="text-[11px] text-[#D0C06C]" href="#">Disconnect</a>
+            <a className="text-[11px] text-[#D0C06C]" href="#">
+              Disconnect
+            </a>
           </li>
         </ul>
       </div>

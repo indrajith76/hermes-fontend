@@ -8,6 +8,7 @@ export default function Home() {
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+  const [nextProcess, SetNextProcess] = useState(true);
 
   return (
     <div>
@@ -144,89 +145,146 @@ export default function Home() {
       </div>
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <div className="bg-[#13141B] px-[27px] py-5 rounded-xl border border-gray-600 w-[700px]">
-          <img src="/images/logo.png" alt="" />
-          <p className="text-3xl leading-10">New Position</p>
-          <p className="text-[10px]">
-            Create a new position and trade on Hermes.
-          </p>
-          <div className="flex gap-5 mt-6">
-            <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
-              <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-              <span className="text-xs">SCALE IN</span>
-            </button>
-            <button class="bg-neutral-950 text-[#D0C06C] border border-[#D0C06C] border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
-              <span class="bg-[#D0C06C] shadow-[#D0C06C] absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-              <span className="text-xs">SCALE OUT</span>
-            </button>
-            <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
-              <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-              <span className="text-xs">VOLUME BOTS</span>
-            </button>
-          </div>
+        {nextProcess ? (
+          <div className="bg-[#13141B] px-[27px] py-5 rounded-xl border border-gray-600 w-[700px]">
+            <img src="/images/logo.png" alt="" />
+            <p className="text-3xl leading-10">New Position</p>
+            <p className="text-[10px]">
+              Create a new position and trade on Hermes.
+            </p>
+            <div className="flex gap-5 mt-6">
+              <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
+                <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                <span className="text-xs">SCALE IN</span>
+              </button>
+              <button class="bg-neutral-950 text-[#D0C06C] border border-[#D0C06C] border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
+                <span class="bg-[#D0C06C] shadow-[#D0C06C] absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                <span className="text-xs">SCALE OUT</span>
+              </button>
+              <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
+                <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                <span className="text-xs">VOLUME BOTS</span>
+              </button>
+            </div>
 
-          <div className="flex flex-col gap-2 mt-7">
-            <p className="text-2xl">Time Intervals (minutes)</p>
-            <input
-              className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
-              type="text"
-              name=""
-              id=""
-              placeholder="Buy Interval"
-            />
-            <input
-              className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
-              type="text"
-              name=""
-              id=""
-              placeholder="Sell Interval"
-            />
-          </div>
+            <div className="flex flex-col gap-2 mt-7">
+              <p className="text-2xl">Time Intervals (minutes)</p>
+              <input
+                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                type="text"
+                name=""
+                id=""
+                placeholder="Buy Interval"
+              />
+              <input
+                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                type="text"
+                name=""
+                id=""
+                placeholder="Sell Interval"
+              />
+            </div>
 
-          <div className="flex flex-col gap-2 mt-7">
-            <p className="text-2xl">Trade Sizes (ranges)</p>
-            <input
-              className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
-              type="text"
-              name=""
-              id=""
-              placeholder="Buy Size"
-            />
-            <input
-              className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
-              type="text"
-              name=""
-              id=""
-              placeholder="Sell Size"
-            />
-          </div>
+            <div className="flex flex-col gap-2 mt-7">
+              <p className="text-2xl">Trade Sizes (ranges)</p>
+              <input
+                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                type="text"
+                name=""
+                id=""
+                placeholder="Buy Size"
+              />
+              <input
+                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                type="text"
+                name=""
+                id=""
+                placeholder="Sell Size"
+              />
+            </div>
 
-          <div className="flex flex-col gap-2 mt-7">
-            <p className="text-2xl">How many wallets should you use?</p>
-            <input
-              className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
-              type="text"
-              name=""
-              id=""
-              placeholder="# of connected wallets to sell on"
-            />
+            <div className="flex flex-col gap-2 mt-7">
+              <p className="text-2xl">How many wallets should you use?</p>
+              <input
+                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                type="text"
+                name=""
+                id=""
+                placeholder="# of connected wallets to sell on"
+              />
+            </div>
+            <div className="flex items-center gap-3 mt-5">
+              <p>SHADOW TRADING:</p>
+              <input
+                className={`switch ${switchStatus ? "switchOn" : "switchOff"}`}
+                onChange={() => setSwitchStatus(!switchStatus)}
+                type="checkbox"
+                checked="true"
+              ></input>
+            </div>
+            <div className="flex justify-end">
+              <button
+                onClick={() => SetNextProcess(!nextProcess)}
+                class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group"
+              >
+                <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                <span className="text-xs">NEXT</span>
+              </button>
+            </div>
           </div>
-          <div className="flex items-center gap-3 mt-5">
-            <p>SHADOW TRADING:</p>
-            <input
-              className={`switch ${switchStatus ? "switchOn" : "switchOff"}`}
-              onChange={() => setSwitchStatus(!switchStatus)}
-              type="checkbox"
-              checked="true"
-            ></input>
+        ) : (
+          <div className="bg-[#13141B] px-[27px] py-5 rounded-xl border border-gray-600 w-[700px]">
+            <img src="/images/logo.png" alt="" />
+            <p className="text-3xl leading-10">Choose Wallets</p>
+            <p className="text-[10px]">
+              Choose or generate the wallets you wish to use to execute.
+            </p>
+
+            <div className="flex flex-col gap-2 mt-7">
+              <p className="text-2xl">Make new wallets</p>
+              <input
+                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                type="text"
+                name=""
+                id=""
+                placeholder="How many wallets?"
+              />
+              <input
+                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                type="text"
+                name=""
+                id=""
+                placeholder="How much eth to fund each with?"
+              />
+              <button class="bg-[#13141B] w-[202px] text-white border border-white border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
+                <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                <span className="text-xs">GENERATE WALLETS</span>
+              </button>
+            </div>
+
+            <p className="text-2xl mt-12">
+              <em>OR...</em>
+            </p> 
+
+            <div className="flex flex-col gap-2 mt-7">
+              <p className="text-2xl">How many wallets should you use?</p>
+              <input
+                className="w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
+                type="text"
+                name=""
+                id=""
+                placeholder="# of connected wallets to sell on"
+              />
+            </div>
+            
+            <div className="flex justify-end mt-[56px]">
+              <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
+                <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                <span className="text-xs">Done</span>
+              </button>
+            </div>
           </div>
-          <div className="flex justify-end">
-            <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
-              <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-              <span className="text-xs">NEXT</span>
-            </button>
-          </div>
-        </div>
+        )}
       </Modal>
 
       <div className="border-t p-9 pt-6">
