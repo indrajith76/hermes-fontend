@@ -17,7 +17,7 @@ export default function Home() {
         <p className="text-4xl mb-5">Open Positions</p>
 
         <div className=" flex flex-col lg:flex-row gap-[63px]">
-          <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+          <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-[30px]">
             <div className="bg-[#13141B] p-4 h-[190px] rounded-[10px]">
               <div className="flex justify-between items-center">
                 <p className="flex items-center gap-1 text-[11px] bg-[#424550] px-[6px] rounded">
@@ -287,7 +287,7 @@ export default function Home() {
         )}
       </Modal>
 
-      <div className="border-t p-5 md:p-9 pt-6">
+      <div className="border-t border-[#424550] p-5 md:p-9 pt-6">
         <div className="md:flex justify-between items-end">
           <p className="text-golden text-[10px]">
             Last Updated - 10 seconds ago...

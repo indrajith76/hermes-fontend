@@ -4,8 +4,8 @@ import { BsList } from "react-icons/bs";
 
 const Navbar = ({ sidebar, setSidebar }) => {
   return (
-    <div className="border-b flex flex-col lg:flex-row lg:items-center">
-      <div className="hidden lg:block w-[192px] lg:border-r pl-2 py-5">
+    <div className="border-b border-[#424550] flex flex-col lg:flex-row lg:items-center">
+      <div className="hidden lg:block w-[192px] 2xl:w-[178px] lg:border-r lg:border-[#424550] pl-2 py-5">
         <Link className="flex items-center" href="/">
           <img src="/images/logo.png" alt="" />
           <div>

@@ -11,10 +11,10 @@ export default function Wallets() {
             <tr>
               <td></td>
               <td></td>
-              <td className="text-[9px] text-[#424550]">Current Action</td>
-              <td className="text-[9px] text-[#424550]">Balance</td>
-              <td className="text-[9px] text-[#424550]">Last activity</td>
-              <td className="text-[9px] text-[#424550]">Actions</td>
+              <td className="text-[10px] text-[#424550]">Current Action</td>
+              <td className="text-[10px] text-[#424550]">Balance</td>
+              <td className="text-[10px] text-[#424550]">Last activity</td>
+              <td className="text-[10px] text-[#424550]">Actions</td>
               <td></td>
               <td></td>
             </tr>
@@ -22,10 +22,10 @@ export default function Wallets() {
           <tbody>
             {[1, 2, 3, 4].map((item, idx) => (
               <tr className="bg-[#13141B]">
-                <td className="rounded-l-lg p-3 text-[11px] text-[#D0C06C]">
-                  #{idx + 1}
+                <td className="rounded-l-lg p-3 text-[11px] text-[#D0C06C] flex items-center gap-3">
+                  #{idx + 1} <p className="text-white text-xl">Main Wallet 🦄</p>
                 </td>
-                <td>Main Wallet 🦄</td>
+                <td></td>
                 <td className=" text-[11px]">Trading SHIB-USDT</td>
                 <td className=" text-[11px]">7.42 ETH</td>
                 <td className=" text-[11px]">1m ago</td>
@@ -49,7 +49,7 @@ export default function Wallets() {
         </div>
       </div>
 
-      <div className="border-t p-5 md:p-9 pt-6">
+      <div className="border-t border-[#424550] p-5 md:p-9 pt-6">
         <div className=" md:flex justify-between items-end">
           <p className="text-golden text-[10px]">
             Last Updated - 10 seconds ago...
@@ -71,13 +71,13 @@ export default function Wallets() {
         </div>
         <h2 className="text-4xl leading-10 mt-2">All Wallets</h2>
 
-        <div className="flex flex-col gap-5 py-5 w-full lg:w-[935px] border-t border-[#26272E] mt-8">
+        <div className="flex flex-col gap-5 py-5 w-full lg:w-[935px] border-t border-[#424550] mt-8">
           {[1, 2, 3, 4].map((item, idx) => (
             <div key={idx} className="flex items-center justify-between">
-              <p className="text-[10px] md:text-[13px]">
+              <p className="text-[10px] md:text-[13px] 2xl:text-base">
                 0x73ff03f25cf2e0d7a1c4bc2ce21eeb22dbbd4c68
               </p>
-              <button className="text-[#D0C06C] text-[10px]">
+              <button className="text-[#D0C06C] text-[10px] 2xl:text-sm">
                 View on Etherscan
               </button>
             </div>

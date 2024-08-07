@@ -7,7 +7,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
     <div
       className={`z-10 duration-500 absolute top-0 ${
         sidebar ? "-left-[170px]" : "left-0"
-      } bg-[#0a0b10] md:relative flex flex-col justify-between border-r border-white text-white`}
+      } bg-[#0a0b10] md:bg-transparent md:relative flex flex-col justify-between border-r border-[#424550] text-white`}
     >
       <button
         onClick={() => setSidebar(!sidebar)}
