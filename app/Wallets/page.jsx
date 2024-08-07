@@ -5,47 +5,45 @@ export default function Wallets() {
         <p className="text-golden text-[11px]">Wallets</p>
         <p className="text-4xl mb-5">Active Wallets</p>
         <div className="w-[320px] md:w-[520px] lg:w-auto overflow-auto">
-
-        <table className="w-[1017px] border-separate border-spacing-y-2">
-          <thead>
-            <tr>
-              <td></td>
-              <td></td>
-              <td className="text-[10px] text-[#424550]">Current Action</td>
-              <td className="text-[10px] text-[#424550]">Balance</td>
-              <td className="text-[10px] text-[#424550]">Last activity</td>
-              <td className="text-[10px] text-[#424550]">Actions</td>
-              <td></td>
-              <td></td>
-            </tr>
-          </thead>
-          <tbody>
-            {[1, 2, 3, 4].map((item, idx) => (
-              <tr className="bg-[#13141B]">
-                <td className="rounded-l-lg p-3 text-[11px] text-[#D0C06C] flex items-center gap-3">
-                  #{idx + 1} <p className="text-white text-xl">Main Wallet 🦄</p>
-                </td>
+          <table className="w-[1017px] border-separate border-spacing-y-2">
+            <thead>
+              <tr>
+                <td></td> 
+                <td className="text-[10px] text-[#424550]">Current Action</td>
+                <td className="text-[10px] text-[#424550]">Balance</td>
+                <td className="text-[10px] text-[#424550]">Last activity</td>
+                <td className="text-[10px] text-[#424550]">Actions</td>
                 <td></td>
-                <td className=" text-[11px]">Trading SHIB-USDT</td>
-                <td className=" text-[11px]">7.42 ETH</td>
-                <td className=" text-[11px]">1m ago</td>
-                <td className=" text-[11px] text-[#D0C06C]">Disperse</td>
-                <td className=" text-[11px] text-[#D0C06C]">Rename Wallet</td>
-                <td className="rounded-r-lg text-[11px] text-[#D0C06C]">
-                  View on Etherscan
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              {[1, 2, 3, 4].map((item, idx) => (
+                <tr className="">
+                  <td className="bg-[#13141B] rounded-l-lg p-3 text-[11px] text-[#D0C06C] flex items-center gap-3">
+                    #{idx + 1}{" "}
+                    <p className="text-white text-xl">Main Wallet 🦄</p>
+                  </td>
+                  <td className="bg-[#13141B]  text-[11px]">Trading SHIB-USDT</td>
+                  <td className="bg-[#13141B]  text-[11px]">7.42 ETH</td>
+                  <td className="bg-[#13141B]  text-[11px]">1m ago</td>
+                  <td className="bg-[#13141B]  text-[11px] text-[#D0C06C]">Disperse</td>
+                  <td className="bg-[#13141B]  text-[11px] text-[#D0C06C]">Rename Wallet</td>
+                  <td className="bg-[#13141B] rounded-r-lg text-[11px] text-[#D0C06C]">
+                    View on Etherscan
+                  </td>
+                </tr>
+              ))}
+              <tr>
+                <td>
+                  <button className="flex items-center gap-1 text-[13px]">
+                    <img src="/images/plus.png" alt="" />
+                    <p>Create new</p>
+                  </button>
                 </td>
               </tr>
-            ))}
-            <tr>
-              <td>
-                <button className="flex items-center gap-1 text-[13px]">
-                  <img src="/images/plus.png" alt="" />
-                  <p>Create new</p>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+            </tbody>
+          </table>
         </div>
       </div>
 
