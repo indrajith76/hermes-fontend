@@ -10,6 +10,8 @@ export default function Home() {
   const closeModal = () => setIsModalOpen(false);
   const [nextProcess, SetNextProcess] = useState(true);
 
+  const [selectBtn, setSelectBtn] = useState(2);
+
   return (
     <div>
       <div className="p-5 md:p-9">
@@ -17,106 +19,43 @@ export default function Home() {
         <p className="text-4xl mb-5">Open Positions</p>
 
         <div className=" flex flex-col lg:flex-row gap-[63px]">
-          <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-[30px]">
-            <div className="bg-[#13141B] p-4 h-[190px] rounded-[10px]">
-              <div className="flex justify-between items-center">
-                <p className="flex items-center gap-1 text-[11px] bg-[#424550] px-[6px] rounded">
-                  <img src="/images/ArrowU.png" alt="" /> IN
+          <div className="w-full grid md:grid-cols-2s lg:grid-cols-3 2xl:grid-cols-5 gap-[30px]">
+            {[1, 2, 3, 4].map((item) => (
+              <div className="bg-[#13141B] p-4 h-[175px] 2xl:h-[180px] rounded-[10px]">
+                <div className="flex justify-between items-center">
+                  <p className="flex items-center gap-1 text-[11px] bg-[#424550] px-[6px] rounded">
+                    <img src="/images/ArrowU.png" alt="" /> IN
+                  </p>
+                  <img src="/images/Star1.png" alt="" />
+                </div>
+                <p className="text-2xl flex items-center gap-2 mt-1">
+                  PEPE-WETH <span className="text-golden text-[11px]">+1%</span>
                 </p>
-                <img src="/images/Star1.png" alt="" />
-              </div>
-              <p className="text-2xl flex items-center gap-2 mt-1">
-                PEPE-WETH <span className="text-golden text-[11px]">+1%</span>
-              </p>
 
-              <div className="bg-black rounded-lg p-2 flex items-center justify-between">
-                <div>
-                  <p className="text-[11px]">Entry market cap</p>
-                  <p className="text-xl">$162.2K</p>
+                <div className="bg-black rounded-lg p-2 flex items-center justify-between">
+                  <div>
+                    <p className="text-[11px]">Entry market cap</p>
+                    <p className="text-xl">$162.2K</p>
+                  </div>
+                  <img src="/images/ArrowR.png" alt="" />
+                  <div>
+                    <p className="text-[11px]">Current MC</p>
+                    <p className="text-xl">$162.2K</p>
+                  </div>
                 </div>
-                <img src="/images/ArrowR.png" alt="" />
-                <div>
-                  <p className="text-[11px]">Current MC</p>
-                  <p className="text-xl">$162.2K</p>
-                </div>
-              </div>
-              <div className="text-[11px] flex items-center justify-between mt-[14px]">
-                <p>ACTIVE: 2HR</p>
-                <div className="flex gap-2">
-                  <button className="text-golden">PAUSE</button>
-                  <button className="text-golden">CLOSE</button>
-                  <button className="text-golden">EDIT</button>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#13141B] p-4 h-[190px] rounded-[10px]">
-              <div className="flex justify-between items-center">
-                <p className="flex items-center gap-1 text-[11px] bg-[#424550] px-[6px] rounded">
-                  <img src="/images/ArrowU.png" alt="" /> IN
-                </p>
-                <img src="/images/Star1.png" alt="" />
-              </div>
-              <p className="text-2xl flex items-center gap-2 mt-1">
-                PEPE-WETH <span className="text-golden text-[11px]">+1%</span>
-              </p>
-
-              <div className="bg-black rounded-lg p-2 flex items-center justify-between">
-                <div>
-                  <p className="text-[11px]">Entry market cap</p>
-                  <p className="text-xl">$162.2K</p>
-                </div>
-                <img src="/images/ArrowR.png" alt="" />
-                <div>
-                  <p className="text-[11px]">Current MC</p>
-                  <p className="text-xl">$162.2K</p>
+                <div className="text-[11px] flex items-center justify-between mt-[14px]">
+                  <p>ACTIVE: 2HR</p>
+                  <div className="flex gap-2">
+                    <button className="text-golden">PAUSE</button>
+                    <button className="text-golden">CLOSE</button>
+                    <button className="text-golden">EDIT</button>
+                  </div>
                 </div>
               </div>
-              <div className="text-[11px] flex items-center justify-between mt-[14px]">
-                <p>ACTIVE: 2HR</p>
-                <div className="flex gap-2">
-                  <button className="text-golden">PAUSE</button>
-                  <button className="text-golden">CLOSE</button>
-                  <button className="text-golden">EDIT</button>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#13141B] p-4 h-[190px] rounded-[10px]">
-              <div className="flex justify-between items-center">
-                <p className="flex items-center gap-1 text-[11px] bg-[#424550] px-[6px] rounded">
-                  <img src="/images/ArrowU.png" alt="" /> IN
-                </p>
-                <img src="/images/Star1.png" alt="" />
-              </div>
-              <p className="text-2xl flex items-center gap-2 mt-1">
-                PEPE-WETH <span className="text-golden text-[11px]">+1%</span>
-              </p>
-
-              <div className="bg-black rounded-lg p-2 flex items-center justify-between">
-                <div>
-                  <p className="text-[11px]">Entry market cap</p>
-                  <p className="text-xl">$162.2K</p>
-                </div>
-                <img src="/images/ArrowR.png" alt="" />
-                <div>
-                  <p className="text-[11px]">Current MC</p>
-                  <p className="text-xl">$162.2K</p>
-                </div>
-              </div>
-              <div className="text-[11px] flex items-center justify-between mt-[14px]">
-                <p>ACTIVE: 2HR</p>
-                <div className="flex gap-2">
-                  <button className="text-golden">PAUSE</button>
-                  <button className="text-golden">CLOSE</button>
-                  <button className="text-golden">EDIT</button>
-                </div>
-              </div>
-            </div>
-
+            ))}
             <div
               onClick={openModal}
-              className="cursor-pointer bg-[#13141B] p-4 h-[190px] rounded-[10px] flex justify-center items-center"
+              className="cursor-pointer bg-[#13141B] p-4 h-[175px] 2xl:h-[180px] rounded-[10px] flex justify-center items-center"
             >
               <img src="/images/plus.png" alt="" />
             </div>
@@ -153,16 +92,55 @@ export default function Home() {
               Create a new position and trade on Hermes.
             </p>
             <div className="flex gap-1 md:gap-5 mt-1 md:mt-6">
-              <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-2 md:px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
-                <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+              <button
+                onClick={() => setSelectBtn(1)}
+                class={`bg-neutral-950 border ${
+                  selectBtn == 1
+                    ? "border-[#D0C06C] text-[#D0C06C]"
+                    : "border-white text-white"
+                } border-b-4 font-medium overflow-hidden relative px-2 md:px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group`}
+              >
+                <span
+                  class={`${
+                    selectBtn == 1
+                      ? "bg-[#D0C06C] shadow-[#D0C06C]"
+                      : "bg-white shadow-white"
+                  } absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]`}
+                ></span>
                 <span className="text-xs">SCALE IN</span>
               </button>
-              <button class="bg-neutral-950 text-[#D0C06C] border border-[#D0C06C] border-b-4 font-medium overflow-hidden relative px-2 md:px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
-                <span class="bg-[#D0C06C] shadow-[#D0C06C] absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+              <button
+                onClick={() => setSelectBtn(2)}
+                class={`bg-neutral-950 border ${
+                  selectBtn == 2
+                    ? "border-[#D0C06C] text-[#D0C06C]"
+                    : "border-white text-white"
+                } border-b-4 font-medium overflow-hidden relative px-2 md:px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group`}
+              >
+                <span
+                  class={`${
+                    selectBtn == 2
+                      ? "bg-[#D0C06C] shadow-[#D0C06C]"
+                      : "bg-white shadow-white"
+                  } absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]`}
+                ></span>
                 <span className="text-xs">SCALE OUT</span>
               </button>
-              <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-2 md:px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
-                <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+              <button
+                onClick={() => setSelectBtn(3)}
+                class={`bg-neutral-950 border ${
+                  selectBtn == 3
+                    ? "border-[#D0C06C] text-[#D0C06C]"
+                    : "border-white text-white"
+                } border-b-4 font-medium overflow-hidden relative px-2 md:px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group`}
+              >
+                <span
+                  class={`${
+                    selectBtn == 1
+                      ? "bg-[#D0C06C] shadow-[#D0C06C]"
+                      : "bg-white shadow-white"
+                  } absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]`}
+                ></span>
                 <span className="text-xs">VOLUME BOTS</span>
               </button>
             </div>
@@ -204,7 +182,9 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-2 mt-2 md:mt-7">
-              <p className="text-lg md:text-2xl">How many wallets should you use?</p>
+              <p className="text-lg md:text-2xl">
+                How many wallets should you use?
+              </p>
               <input
                 className=" md:w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
                 type="text"
@@ -264,10 +244,12 @@ export default function Home() {
 
             <p className="text-lg md:text-2xl mt-12">
               <em>OR...</em>
-            </p> 
+            </p>
 
             <div className="flex flex-col gap-2 md:mt-7">
-              <p className="text-lg md:text-2xl">How many wallets should you use?</p>
+              <p className="text-lg md:text-2xl">
+                How many wallets should you use?
+              </p>
               <input
                 className=" md:w-[283px] text-[13px] bg-[#13141B] border border-[#424550] rounded-[10px] p-2"
                 type="text"
@@ -276,7 +258,7 @@ export default function Home() {
                 placeholder="# of connected wallets to sell on"
               />
             </div>
-            
+
             <div className="flex justify-end mt-[56px]">
               <button class="bg-neutral-950 text-white border border-white border-b-4 font-medium overflow-hidden relative px-6 py-[4px] rounded-lg active:opacity-75 outline-none duration-300 group">
                 <span class="bg-white shadow-white absolute -top-[150%] left-0 inline-flex w-80 rounded-lg opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
